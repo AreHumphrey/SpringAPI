@@ -1,0 +1,9 @@
+services:
+  postgres:
+    image: 'postgres:11.2'
+    environment:
+      - 'POSTGRES_USER=humphrey'
+      - 'POSTGRES_HOST_AUTH_METHOD=trust'
+      - 'POSTGRES_DB=mydatabase'
+    ports:
+      - '5432:5432'
