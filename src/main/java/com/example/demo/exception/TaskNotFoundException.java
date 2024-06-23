@@ -1,7 +1,9 @@
 package com.example.demo.exception;
 
-public class TaskNotFoundException extends Exception {
+import org.springframework.http.HttpStatus;
+
+public class TaskNotFoundException extends ApiException{
     public TaskNotFoundException(String message) {
-        super(message);
+        super(HttpStatus.NOT_FOUND, message);
     }
 }
